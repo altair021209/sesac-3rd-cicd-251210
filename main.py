@@ -8,7 +8,7 @@ app = FastAPI()
 class CreatTodoschema(BaseModel):
     id:str
     title:str
-    content:str
+    content:str #test
 
 
 conn = psycopg2.connect(
@@ -59,6 +59,7 @@ def read_data(id):
 
     data = cursor.fetchall()
     return  {"data": data}
+    cursor.close
 
 
 #Update
