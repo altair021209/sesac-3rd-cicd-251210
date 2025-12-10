@@ -59,7 +59,7 @@ def read_data(id):
 
     data = cursor.fetchall()
     return  {"data": data}
-    cursor.close
+    
 
 
 #Update
